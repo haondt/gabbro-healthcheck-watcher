@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  healthcheck:
+    build:
+      context: .
+    ports:
+      - 9090:9090
+    environment:
+      DISCORD_WEBHOOK_URL: ${DISCORD_WEBHOOK_URL}
+      PING_TIMEOUT_MS: ${PING_TIMEOUT_MS}
+
